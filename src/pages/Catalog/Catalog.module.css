@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 48px;
+  border-radius: 16px;
+  background: var(--Inputs);
+}
+
+.main h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.main p {
+  color: var(--Text);
+}

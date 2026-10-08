@@ -1,0 +1,46 @@
+.header {
+  position: sticky;
+  top: -1px;
+  z-index: var(--z-idx-header);
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 72px;
+    background: var(--Inputs, #f7f7f7);
+    border-bottom: 1px solid var(--Badges, #f2f4f7);
+  }
+}
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  margin-left: 450px;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  .link {
+    padding: 24px 0;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--Main, #101828);
+
+    &.active {
+      color: var(--Button);
+    }
+  }
+}

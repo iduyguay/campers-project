@@ -1,0 +1,71 @@
+.main {
+  position: relative;
+  isolation: isolate;
+  min-height: 696px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 192px;
+  align-items: flex-start;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(-1);
+    z-index: -1;
+
+    width: max(1280px, 100dvw);
+    height: 100%;
+    border-bottom: 1px solid var(--Badges, #f2f4f7);
+    background-color: #332619;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)), url('/home/hero-original.jpg');
+  }
+}
+
+.title {
+  margin-bottom: 1rem;
+
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--Inputs, #f7f7f7);
+}
+.slogan {
+  margin-bottom: 40px;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--Inputs, #f7f7f7);
+}
+
+.socialLinks {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 200px;
+  color: #fff;
+  background: rgb(16 24 40 / 65%);
+  font-size: 14px;
+}
+
+.socialLinks a:hover {
+  background: var(--Button);
+}

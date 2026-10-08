@@ -1,0 +1,29 @@
+:root {
+  --Main: #101828;
+  --Text: #475467;
+  --Gray: #6c717b;
+  --Gray-light: #dadde1;
+  --Inputs: #f7f7f7;
+  --Badges: #f2f4f7;
+  --White: #fff;
+  --Button: #829b91;
+  --Button-Hover: #6f8a7e;
+  --cl-primary: 71 84 103;
+  --z-idx-header: 30;
+  font-family: Inter, sans-serif;
+}
+body { min-width: 1280px; min-height: 100vh; color: var(--Main); background: #fff; font-size: 16px; line-height: 24px; }
+#root { display: grid; grid-template-areas: '. header .' '. main .'; grid-template-columns: minmax(64px, 1fr) minmax(0, 1312px) minmax(64px, 1fr); grid-template-rows: 72px 1fr; row-gap: 48px; min-height: 100vh; padding-bottom: 48px; }
+#root:has(main[data-page='home']) { row-gap: 0; padding-bottom: 0; }
+header { grid-area: header; }
+main { grid-area: main; min-width: 0; }
+img { display: block; }
+button, a, input[type='radio'], input[type='checkbox'] { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .65; }
+:focus-visible { outline: 2px solid var(--Button); outline-offset: 4px; }
+.visuallyHidden { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip: rect(0 0 0 0); clip-path: inset(50%); overflow: hidden; }
+.pageLink { display: inline-flex; justify-content: center; align-items: center; min-width: 173px; padding: 16px 32px; border-radius: 200px; font-size: 16px; font-weight: 500; line-height: 24px; transition: background-color 200ms, border-color 200ms; }
+.pageLink.filled { color: #fff; background: var(--Button); }
+.pageLink.filled:hover { background: var(--Button-Hover); }
+.pageLink.outlined { border: 1px solid var(--Gray-light); }
+.pageLink.outlined:hover { border-color: var(--Button); }
