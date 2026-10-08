@@ -1,12 +1,29 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { CampersList, CampersFilter } from '@components';
+import { fetchCampers } from '@redux/campersOperations';
+import { resetState } from '@redux/campersSlice';
+import { updateFilters } from '@redux/filtersSlice';
+
 import css from './Catalog.module.css';
 
 export default function Catalog() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(updateFilters({}));
+    dispatch(fetchCampers({ filters: {} }));
+
+    return () => {
+      dispatch(resetState());
+    };
+  }, [dispatch]);
+
   return (
     <main className={css.main}>
-      <h1>Campers catalog</h1>
-      <p>The catalog is under development. Camper listings and filters will be added next.</p>
-      <Link to="/" className="pageLink outlined">Back to home</Link>
+      <h1 className="visuallyHidden">Campers catalog</h1>
+      <CampersFilter />
+      <CampersList />
     </main>
   );
 }

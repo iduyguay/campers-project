@@ -1,0 +1,16 @@
+.filters { grid-area: filters; align-self: start; padding: 24px; border-radius: 20px; background: var(--Inputs); }
+.form { display: flex; flex-direction: column; gap: 24px; }
+.location { display: grid; gap: 8px; color: var(--Gray); }
+.inputWrap { display: flex; align-items: center; gap: 8px; padding: 16px 20px; background: #fff; border-radius: 12px; color: var(--Main); }
+.inputWrap input { width: 100%; cursor: text; }
+.form h2 { font-size: 20px; font-weight: 600; margin: 16px 0 0; }
+.group { display: grid; gap: 8px; }
+.group legend { margin-bottom: 8px; color: var(--Gray); }
+.option { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.option input { appearance: auto; accent-color: var(--Text); width: 24px; height: 24px; flex-shrink: 0; }
+.actions { display: grid; gap: 16px; margin-top: 24px; }
+.actions button { width: 100%; margin: 0; }
+.actions button:last-child { background: #fff; }
+.equipment { color: var(--Gray); }
+.equipment summary { cursor: pointer; }
+.equipment > div { display: grid; gap: 8px; color: var(--Main); margin-top: 12px; }

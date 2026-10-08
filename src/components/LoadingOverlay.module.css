@@ -1,0 +1,6 @@
+.overlay { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: rgb(16 24 40 / 8%); }
+.panel { width: 544px; padding: 48px; border-radius: 16px; background: #fff; text-align: center; box-shadow: 0 8px 32px rgb(16 24 40 / 4%); }
+.panel h2 { font-size: 24px; line-height: 32px; font-weight: 600; margin: 32px 0 16px; }
+.spinner { display: block; width: 72px; height: 72px; margin: auto; border: 6px solid var(--Inputs); border-top-color: var(--Button); border-radius: 50%; animation: spin 800ms linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }

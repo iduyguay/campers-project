@@ -1,0 +1,2 @@
+.detailsList { display: grid; gap: 8px; padding-top: 16px; border-top: 1px solid var(--Gray-light); }
+.detailsItem { display: flex; justify-content: space-between; gap: 16px; color: var(--Main); }

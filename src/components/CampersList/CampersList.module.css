@@ -1,0 +1,10 @@
+.campers { grid-area: campers; min-width: 0; }
+.list { display: grid; gap: 32px; margin-bottom: 40px; }
+.empty { min-height: 840px; background: var(--Inputs); border-radius: 16px; padding: 24px 40px 80px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.empty > img { width: 488px; height: 463px; object-fit: cover; margin-bottom: 0; }
+.empty h2, .error h2 { font-size: 24px; font-weight: 600; line-height: 32px; margin-bottom: 16px; }
+.empty p { margin-bottom: 44px; }
+.actions { display: flex; gap: 16px; }
+.actions button { margin: 0; }
+.actions button:first-child { background: #fff; }
+.error { padding: 48px; background: var(--Inputs); border-radius: 16px; display: grid; gap: 24px; justify-items: center; }

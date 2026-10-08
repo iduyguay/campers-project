@@ -1,6 +1,6 @@
 # Campers Project
 
-Desktop camper rental frontend based on the supplied TravelTrucks design. This repository is currently at stage 1 and is not a completed application.
+Desktop camper rental frontend based on the supplied TravelTrucks design. This repository is currently at stage 2 and is not a completed application.
 
 ## Current stage
 
@@ -8,14 +8,18 @@ Desktop camper rental frontend based on the supplied TravelTrucks design. This r
 - Desktop home banner and shared navigation.
 - GitHub and LinkedIn profile links.
 - React Router routes for Home and Catalog.
-- Catalog placeholder with a return link to Home.
+- Camper catalog connected to the assignment API.
+- Redux state for listings, filters and favorites.
+- Server-side location, vehicle and equipment filters.
+- Load more pagination, loading, retry and empty states.
+- Favorites saved across page reloads.
+- Detail links open a temporary development page in a new tab.
 
 ## Next stages
 
-1. Catalog: API requests, Redux state, server-side filters, camper cards, favorites and Load more.
-2. Camper details: photo gallery, vehicle information, reviews, booking form and deployment.
+Camper details, photo gallery, vehicle information, reviews, booking form and deployment will be completed in stage 3.
 
-The assignment API is `https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers`. API integration will be added in the catalog stage.
+The assignment API is `https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers`. Filtering and pagination are performed through API requests.
 
 ## Run locally
 
@@ -27,6 +31,7 @@ npm run dev
 ```
 
 ```sh
+npm run verify
 npm run lint
 npm run build
 npm run preview

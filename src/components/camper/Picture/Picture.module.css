@@ -1,0 +1,15 @@
+.cardThumb {
+  width: 100%;
+  height: 320px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  background-color: #f7f7f7;
+}
+.cardIll {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 400ms ease-out;
+}

@@ -1,0 +1,6 @@
+.card { display: grid; grid-template-columns: 219px minmax(0, 1fr); gap: 24px; padding: 24px; border-radius: 16px; background: var(--Inputs); }
+.card > div:first-child { height: 240px; background: #eaebee; }
+.cardBody { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; min-width: 0; }
+.cardCenter, .cardBottom { width: 100%; }
+@media (prefers-reduced-motion: no-preference) { .card { animation: appear 200ms ease-out; } }
+@keyframes appear { from { opacity: .4; } to { opacity: 1; } }
