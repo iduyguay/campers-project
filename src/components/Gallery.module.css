@@ -1,0 +1,8 @@
+.gallery { min-width: 0; }
+.main { height: 504px; background: var(--Inputs); border-radius: 16px; overflow: hidden; }
+.main img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.thumbnails { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin-top: 24px; }
+.thumbnail, .selected { height: 148px; border-radius: 16px; overflow: hidden; background: var(--Inputs); border: 3px solid transparent; }
+.selected { border-color: var(--Button); }
+.thumbnails img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.missing { height: 504px; border-radius: 16px; background: var(--Inputs); display: grid; place-items: center; }

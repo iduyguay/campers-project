@@ -1,25 +1,28 @@
 # Campers Project
 
-Desktop camper rental frontend based on the supplied TravelTrucks design. This repository is currently at stage 2 and is not a completed application.
+Desktop camper rental frontend built with React and Vite, based on the supplied TravelTrucks design.
 
-## Current stage
+## Features
 
-- Vite and React project setup.
-- Desktop home banner and shared navigation.
-- GitHub and LinkedIn profile links.
-- React Router routes for Home and Catalog.
-- Camper catalog connected to the assignment API.
-- Redux state for listings, filters and favorites.
-- Server-side location, vehicle and equipment filters.
-- Load more pagination, loading, retry and empty states.
-- Favorites saved across page reloads.
-- Detail links open a temporary development page in a new tab.
+- Home page with navigation and a catalog link.
+- Camper listings, server-side filters and Load more pagination.
+- Favorites preserved across page reloads.
+- Camper details with vehicle information, selectable photo gallery and reviews.
+- Booking form with name and email validation and a success notification.
+- Loading, empty, retry and not-found states.
 
-## Next stages
+The booking form stores submissions locally in the browser. It does not send a real rental reservation to a server.
 
-Camper details, photo gallery, vehicle information, reviews, booking form and deployment will be completed in stage 3.
+## Technologies
 
-The assignment API is `https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers`. Filtering and pagination are performed through API requests.
+React, Vite, Redux Toolkit, Redux Persist, React Router, Axios and CSS Modules.
+
+## API
+
+The assignment API is `https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers`.
+
+- `GET /campers`: listings, filters and pagination.
+- `GET /campers/:id`: camper details.
 
 ## Run locally
 
@@ -37,10 +40,18 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+Import this repository in Vercel, select the Vite preset, use `npm run build` as the build command and `dist` as the output directory. The root directory is the repository root.
+
+The API URL has a default value, so an environment variable is not required. An optional `VITE_API_KEY` can override the MockAPI project ID. Variables prefixed with `VITE_` are visible in the client bundle.
+
+`vercel.json` includes the rewrite required to open and reload catalog and detail routes directly.
+
 ## Links
 
 - Repository: [iduyguay/campers-project](https://github.com/iduyguay/campers-project)
-- Live website: not deployed yet.
+- Live website: deployment pending.
 - [GitHub profile](https://github.com/iduyguay)
 - [LinkedIn](https://www.linkedin.com/in/ipekduyguay/)
 

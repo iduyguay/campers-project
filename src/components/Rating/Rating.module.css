@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.star {
+  fill: #f2f4f7;
+  &.active {
+    fill: #ffc531;
+  }
+}

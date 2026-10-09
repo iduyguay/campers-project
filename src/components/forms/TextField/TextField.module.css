@@ -1,0 +1,7 @@
+.field { position: relative; width: 100%; border: 1px solid transparent; border-radius: 12px; background: var(--Inputs); }
+.input { width: 100%; padding: 17px; cursor: text; border-radius: inherit; }
+.input::placeholder { color: var(--Gray); opacity: 1; }
+.invalid { border-color: #ff3838; background: #ffe1e1; }
+.invalid .input { padding-right: 48px; }
+.icon { position: absolute; right: 17px; top: 50%; transform: translateY(-50%); color: #ff3838; }
+.error { color: #ff3838; margin-top: 4px; }

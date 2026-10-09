@@ -1,0 +1,9 @@
+.details { padding-top: 16px; }
+.top { display: grid; grid-template-columns: 638px minmax(0, 1fr); gap: 24px; align-items: start; }
+.information { display: grid; gap: 16px; }
+.summary { padding: 24px; background: var(--Inputs); border-radius: 16px; display: grid; gap: 24px; }
+.summary :global(h1) { margin-bottom: 0; }
+.bottom { display: grid; grid-template-columns: 623px minmax(0, 1fr); gap: 48px; margin-top: 88px; align-items: start; }
+.bottom h2 { font-size: 24px; line-height: 32px; font-weight: 600; margin-bottom: 24px; }
+.bottom > form { margin-top: 56px; }
+.error { display: grid; gap: 24px; justify-items: start; }

@@ -1,29 +1,24 @@
-import { Navigate, Route, Routes, Link } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import Header from './components/Header/Header';
-import Home from './pages/Home/Home';
-import Catalog from './pages/Catalog/Catalog';
-
-function DetailsInProgress() {
-  return (
-    <main style={{ padding: '48px 64px' }}>
-      <h1 style={{ fontSize: '32px', marginBottom: '24px' }}>Camper details</h1>
-      <p style={{ marginBottom: '24px' }}>The gallery, reviews and booking form are under development.</p>
-      <Link to="/catalog" className="pageLink outlined">Back to catalog</Link>
-    </main>
-  );
-}
-
+import Header from '@components/Header/Header';
+import LoadingOverlay from '@components/LoadingOverlay';
+const Home = lazy(() => import('@pages/Home/Home'));
+const Catalog = lazy(() => import('@pages/Catalog/Catalog'));
+const Details = lazy(() => import('@pages/Details/Details'));
+const NotFound = lazy(() => import('@pages/NotFound/NotFound'));
 export default function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/catalog/:id" element={<DetailsInProgress />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <Suspense fallback={<LoadingOverlay />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/catalog/:id" element={<Details />} />
+          <Route path="*" element={<NotFound path="/" pageName="Home" />} />
+        </Routes>
+      </Suspense>
       <Toaster />
     </>
   );
