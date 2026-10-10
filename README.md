@@ -54,9 +54,3 @@ The API URL has a default value, so an environment variable is not required. An 
 - Live website: deployment pending.
 - [GitHub profile](https://github.com/iduyguay)
 - [LinkedIn](https://www.linkedin.com/in/ipekduyguay/)
-
-## Author and credits
-
-Adaptation: **İpek Duygu Aykaş**.
-
-Adapted from [neoversity-woolf/travel-trucks-app](https://github.com/neoversity-woolf/travel-trucks-app). Original author: yaroslav.kosytsia (2024). The original MIT license is preserved in `LICENSE`.
