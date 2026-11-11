@@ -48,6 +48,10 @@ The API URL has a default value, so an environment variable is not required. An 
 
 `vercel.json` includes the rewrite required to open and reload catalog and detail routes directly.
 
+## Attribution and license
+
+This is an adaptation of the TravelTrucks project/design supplied for the assignment. The original project is [yaroslav.kosytsia/travel-trucks-app](https://github.com/neoversity-woolf/travel-trucks-app); this adaptation was made by İpek Duygu Aykaş. The original project is licensed under the MIT License. See [LICENSE](LICENSE) for the original copyright and license notice.
+
 ## Links
 
 - Repository: [iduyguay/campers-project](https://github.com/iduyguay/campers-project)
